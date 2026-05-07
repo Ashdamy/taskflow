@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaskFlow</title>
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+  <div class="app">
+    <!-- ================= HEADER ================= -->
+    <header class="panel-header">
+      <h1 class="panel-titulo">Creacion Pagina web</h1>
+      <span class="panel-subtitulo">Gestión de tareas</span>
+    </header>
+    <!-- ================= TABLERO ================= -->
+    <main class="panel-tablero">
+      <!-- ===== COLUMNA: POR HACER ===== -->
+      <section class="columna-kanban">
+        <div class="columna-cabecera">
+          <h2 class="columna-titulo">Por hacer</h2>
+          <span class="columna-contador">3</span>
+        </div>
+        <div class="columna-lista">
+
+          <!-- TARJETA 1 -->
+          <article class="tarjeta-tarea">
+            <span class="tarea-etiqueta">Diseño</span>
+            <h3 class="tarea-titulo">Crear paleta de colores</h3>
+            <p class="tarea-desc">
+              Definir los colores principales del sistema de diseño.
+            </p>
+            <div class="tarea-meta">
+              <span class="tarea-prioridad tarea-prioridad--alta">Alta</span>
+              <span class="tarea-fecha">15 ene 2025</span>
+            </div>
+          </article>
+
+          <!-- TARJETA 2 -->
+          <article class="tarjeta-tarea">
+            <span class="tarea-etiqueta">Diseño</span>
+            <h3 class="tarea-titulo">Definir logo</h3>
+            <p class="tarea-desc">
+              Definir el logo representativo del sistema.
+            </p>
+            <div class="tarea-meta">
+              <span class="tarea-prioridad tarea-prioridad--media">Media</span>
+              <span class="tarea-fecha">20 ene 2025</span>
+            </div>
+          </article>
+
+          <!-- TARJETA 3 -->
+          <article class="tarjeta-tarea">
+            <span class="tarea-etiqueta">Diseño</span>
+            <h3 class="tarea-titulo">Definir tipografía</h3>
+            <p class="tarea-desc">
+              Definir la tipografía del sistema.
+            </p>
+            <div class="tarea-meta">
+              <span class="tarea-prioridad tarea-prioridad--baja">Baja</span>
+              <span class="tarea-fecha">30 ene 2025</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ===== COLUMNA: EN PROGRESO ===== -->
+      <section class="columna-kanban">
+        <div class="columna-cabecera">
+          <h2 class="columna-titulo">En progreso</h2>
+          <span class="columna-contador">1</span>
+        </div>
+
+        <div class="columna-lista">
+
+          <article class="tarjeta-tarea">
+            <span class="tarea-etiqueta">Frontend</span>
+            <h3 class="tarea-titulo">Maquetar tarjetas</h3>
+            <p class="tarea-desc">
+              Construir estructura HTML y estilos base.
+            </p>
+            <div class="tarea-meta">
+              <span class="tarea-prioridad tarea-prioridad--media">Media</span>
+              <span class="tarea-fecha">18 ene 2025</span>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- ===== COLUMNA: LISTO ===== -->
+      <section class="columna-kanban">
+        <div class="columna-cabecera">
+          <h2 class="columna-titulo">Listo</h2>
+          <span class="columna-contador">1</span>
+        </div>
+
+        <div class="columna-lista">
+
+          <article class="tarjeta-tarea">
+            <span class="tarea-etiqueta">Setup</span>
+            <h3 class="tarea-titulo">Crear proyecto base</h3>
+            <p class="tarea-desc">
+              Inicialización del proyecto TaskFlow.
+            </p>
+            <div class="tarea-meta">
+              <span class="tarea-prioridad tarea-prioridad--baja">Baja</span>
+              <span class="tarea-fecha">10 ene 2025</span>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
