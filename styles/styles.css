@@ -1,5 +1,10 @@
 
 /* ═══════════════════════════════════
+   Importar Tokens
+═══════════════════════════════════ */
+@import url(tokens.css);
+
+/* ═══════════════════════════════════
    RESET GLOBAL
 ═══════════════════════════════════ */
 *, *::before, *::after {
@@ -12,9 +17,9 @@
    BODY / CONFIGURACIÓN GENERAL
 ═══════════════════════════════════ */
 body {
-  font-family: 'Segoe UI', system-ui, sans-serif;
-  background-color: #f1f5f9;
-  color: #1e293b;
+  font-family: var(--fuente-base);
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
   min-height: 100vh;
   padding: 20px 16px;
 }
@@ -53,11 +58,11 @@ body {
 }
 
 /* ═══════════════════════════════════
-   TABLERO 
+   TABLERO (GRID)
 ═══════════════════════════════════ */
 .panel-tablero {
   display: grid;
-  grid-template-columns: 1fr; 
+  grid-template-columns: 1fr; /* mobile first */
   gap: 16px;
 }
 
@@ -109,15 +114,26 @@ body {
   background: #f8fafc;
   border: 1px solid #e2e8f0;
   border-radius: 8px;
-  padding: 12px 14px;    /* padding = espacio interior de la tarjeta */
+  padding: 12px 14px;
   display: flex;
   flex-direction: column;
   gap: 6px;
+  box-shadow: var(--sombra-sm);
+  transform: translateY(0);
+  transition: box-shadow var(--trans-base), transform var(--trans-base);
+  cursor: pointer;
+}
+
+.tarjeta-tarea:hover {
+  box-shadow: var(--sombra-md);
+  transform: translateY(-2px);
 }
 
 .tarea-etiqueta {
-  display: inline-block;  /* inline-block para que respete padding */
-  font-size: 0.7rem; font-weight: 700; color: #64748b;
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #64748b;
   background: #e2e8f0;
   padding: 2px 8px;
   border-radius: 20px;
@@ -154,12 +170,14 @@ body {
   color: white;
 }
 
-.tarea-prioridad--alta  { background: #dc2626; }
-.tarea-prioridad--media { background: #ea580c; }
-.tarea-prioridad--baja  { background: #16a34a; }
+.tarea-prioridad--alta  { background: var(--prioridad-alta); }
+.tarea-prioridad--media { background: var(--prioridad-media); }
+.tarea-prioridad--baja  { background: var(--prioridad-baja); }
+
 /* ═══════════════════════════════════
    FECHA
 ═══════════════════════════════════ */
 .tarea-fecha {
-  .tarea-fecha { font-size: 0.75rem; color: #94a3b8; }
+  font-size: 0.75rem;
+  color: #94a3b8;
 }
