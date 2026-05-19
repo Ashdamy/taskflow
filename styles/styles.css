@@ -37,19 +37,22 @@ body {
 ═══════════════════════════════════ */
 .panel-header {
   display: flex;
-  align-items: baseline;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  background: var(--color-marca);
+  border-radius: var(--radio-md);
   gap: 12px;
-  padding: 20px 24px;
-  background: white;
-  border-radius: 12px;
-  border-left: 5px solid #0f172a;
-  margin-bottom: 24px;
+  flex-wrap: wrap;
 }
 
 .panel-titulo {
-  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
   font-weight: 800;
-  color: #0f172a;
+  font-size: var(--text-xl);
 }
 
 .panel-subtitulo {
@@ -57,23 +60,38 @@ body {
   color: #64748b;
 }
 
+.panel-contador {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: var(--text-sm);
+  color: rgba(255,255,255,0.7);
+}
+
 /* ═══════════════════════════════════
-   TABLERO (GRID)
+   TABLERO FLEXBOX
 ═══════════════════════════════════ */
 .panel-tablero {
-  display: grid;
-  grid-template-columns: 1fr; /* mobile first */
+  display: flex;
   gap: 16px;
+  align-items: flex-start;
 }
 
 /* ═══════════════════════════════════
    COLUMNAS KANBAN
 ═══════════════════════════════════ */
 .columna-kanban {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
   background: white;
   border-radius: 12px;
   padding: 16px;
   border: 1px solid #e2e8f0;
+
+  min-width: 0;
 }
 
 .columna-cabecera {
@@ -102,6 +120,7 @@ body {
 }
 
 .columna-lista {
+  flex: 1;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -115,18 +134,31 @@ body {
   border: 1px solid #e2e8f0;
   border-radius: 8px;
   padding: 12px 14px;
+
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 10px;
+
   box-shadow: var(--sombra-sm);
   transform: translateY(0);
-  transition: box-shadow var(--trans-base), transform var(--trans-base);
+  transition: box-shadow var(--trans-base),
+  ransform var(--trans-base);
+
   cursor: pointer;
 }
 
 .tarjeta-tarea:hover {
   box-shadow: var(--sombra-md);
   transform: translateY(-2px);
+}
+
+/* ═══════════════════════════════════
+   CONTENIDO SUPERIOR DE TARJETA
+═══════════════════════════════════ */
+.tarea-top {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
 }
 
 .tarea-etiqueta {
@@ -140,9 +172,11 @@ body {
 }
 
 .tarea-titulo {
+  flex: 1;
   font-size: 0.9rem;
   font-weight: 600;
   color: #1e293b;
+  line-height: 1.4;
 }
 
 .tarea-desc {
@@ -151,10 +185,15 @@ body {
   line-height: 1.5;
 }
 
+/* ═══════════════════════════════════
+   META DE TARJETA
+═══════════════════════════════════ */
 .tarea-meta {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
   margin-top: 4px;
 }
 
@@ -170,9 +209,17 @@ body {
   color: white;
 }
 
-.tarea-prioridad--alta  { background: var(--prioridad-alta); }
-.tarea-prioridad--media { background: var(--prioridad-media); }
-.tarea-prioridad--baja  { background: var(--prioridad-baja); }
+.tarea-prioridad--alta  {
+  background: var(--prioridad-alta);
+}
+
+.tarea-prioridad--media {
+  background: var(--prioridad-media);
+}
+
+.tarea-prioridad--baja  {
+  background: var(--prioridad-baja);
+}
 
 /* ═══════════════════════════════════
    FECHA
