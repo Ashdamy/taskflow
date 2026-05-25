@@ -4,14 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TaskFlow</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-rel="stylesheet">
-<link rel="stylesheet" href="styles/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
-  <div class="app">
+  <div class="panel">
     <!-- ================= HEADER ================= -->
     <header class="panel-header">
       <h1 class="panel-titulo">Creacion Pagina web</h1>
@@ -28,43 +27,47 @@ rel="stylesheet">
         <div class="columna-lista">
 
           <!-- TARJETA 1 -->
-          <article class="tarjeta-tarea">
-            <span class="tarea-etiqueta">Diseño</span>
+          <article class="tarea-card">
+            <span class="tarea-prioridad tarea-prioridad--alta">Alta</span>
             <h3 class="tarea-titulo">Crear paleta de colores</h3>
-            <p class="tarea-desc">
-              Definir los colores principales del sistema de diseño.
-            </p>
             <div class="tarea-meta">
-              <span class="tarea-prioridad tarea-prioridad--alta">Alta</span>
+              <span class="tarea-etiqueta">Diseño</span>
               <span class="tarea-fecha">15 ene 2025</span>
+            </div>
+            <div class="tarea-acciones">
+              <button>Editar</button>
+              <button>Eliminar</button>
             </div>
           </article>
 
           <!-- TARJETA 2 -->
-          <article class="tarjeta-tarea">
-            <span class="tarea-etiqueta">Diseño</span>
+          <article class="tarea-card">
+            <span class="tarea-prioridad tarea-prioridad--media">Media</span>
             <h3 class="tarea-titulo">Definir logo</h3>
-            <p class="tarea-desc">
-              Definir el logo representativo del sistema.
-            </p>
             <div class="tarea-meta">
-              <span class="tarea-prioridad tarea-prioridad--media">Media</span>
+              <span class="tarea-etiqueta">Diseño</span>
               <span class="tarea-fecha">20 ene 2025</span>
+            </div>
+            <div class="tarea-acciones">
+              <button>Editar</button>
+              <button>Eliminar</button>
             </div>
           </article>
 
           <!-- TARJETA 3 -->
-          <article class="tarjeta-tarea">
-            <span class="tarea-etiqueta">Diseño</span>
+          <article class="tarea-card">
+            <span class="tarea-prioridad tarea-prioridad--baja">Baja</span>
             <h3 class="tarea-titulo">Definir tipografía</h3>
-            <p class="tarea-desc">
-              Definir la tipografía del sistema.
-            </p>
             <div class="tarea-meta">
-              <span class="tarea-prioridad tarea-prioridad--baja">Baja</span>
+              <span class="tarea-etiqueta">Diseño</span>
               <span class="tarea-fecha">30 ene 2025</span>
             </div>
+            <div class="tarea-acciones">
+              <button>Editar</button>
+              <button>Eliminar</button>
+            </div>
           </article>
+
         </div>
       </section>
 
@@ -74,18 +77,18 @@ rel="stylesheet">
           <h2 class="columna-titulo">En progreso</h2>
           <span class="columna-contador">1</span>
         </div>
-
         <div class="columna-lista">
 
-          <article class="tarjeta-tarea">
-            <span class="tarea-etiqueta">Frontend</span>
+          <article class="tarea-card">
+            <span class="tarea-prioridad tarea-prioridad--media">Media</span>
             <h3 class="tarea-titulo">Maquetar tarjetas</h3>
-            <p class="tarea-desc">
-              Construir estructura HTML y estilos base.
-            </p>
             <div class="tarea-meta">
-              <span class="tarea-prioridad tarea-prioridad--media">Media</span>
+              <span class="tarea-etiqueta">Frontend</span>
               <span class="tarea-fecha">18 ene 2025</span>
+            </div>
+            <div class="tarea-acciones">
+              <button>Editar</button>
+              <button>Eliminar</button>
             </div>
           </article>
 
@@ -98,22 +101,24 @@ rel="stylesheet">
           <h2 class="columna-titulo">Listo</h2>
           <span class="columna-contador">1</span>
         </div>
-
         <div class="columna-lista">
 
-          <article class="tarjeta-tarea">
-            <span class="tarea-etiqueta">Setup</span>
+          <article class="tarea-card">
+            <span class="tarea-prioridad tarea-prioridad--baja">Baja</span>
             <h3 class="tarea-titulo">Crear proyecto base</h3>
-            <p class="tarea-desc">
-              Inicialización del proyecto TaskFlow.
-            </p>
             <div class="tarea-meta">
-              <span class="tarea-prioridad tarea-prioridad--baja">Baja</span>
+              <span class="tarea-etiqueta">Setup</span>
               <span class="tarea-fecha">10 ene 2025</span>
             </div>
+            <div class="tarea-acciones">
+              <button>Editar</button>
+              <button>Eliminar</button>
+            </div>
           </article>
+
         </div>
       </section>
+
     </main>
   </div>
 </body>
