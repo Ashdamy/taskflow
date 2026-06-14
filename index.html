@@ -1,125 +1,128 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TaskFlow</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles/styles.css">
-</head>
-<body>
-  <div class="panel">
-    <!-- ================= HEADER ================= -->
-    <header class="panel-header">
-      <h1 class="panel-titulo">Creacion Pagina web</h1>
-      <span class="panel-subtitulo">Gestión de tareas</span>
-    </header>
-    <!-- ================= TABLERO ================= -->
-    <main class="panel-tablero">
-      <!-- ===== COLUMNA: POR HACER ===== -->
-      <section class="columna-kanban">
-        <div class="columna-cabecera">
-          <h2 class="columna-titulo">Por hacer</h2>
-          <span class="columna-contador">3</span>
-        </div>
-        <div class="columna-lista">
-
-          <!-- TARJETA 1 -->
-          <article class="tarea-card">
-            <span class="tarea-prioridad tarea-prioridad--alta">Alta</span>
-            <h3 class="tarea-titulo">Crear paleta de colores</h3>
-            <div class="tarea-meta">
-              <span class="tarea-etiqueta">Diseño</span>
-              <span class="tarea-fecha">15 ene 2025</span>
-            </div>
-            <div class="tarea-acciones">
-              <button>Editar</button>
-              <button>Eliminar</button>
-            </div>
-          </article>
-
-          <!-- TARJETA 2 -->
-          <article class="tarea-card">
-            <span class="tarea-prioridad tarea-prioridad--media">Media</span>
-            <h3 class="tarea-titulo">Definir logo</h3>
-            <div class="tarea-meta">
-              <span class="tarea-etiqueta">Diseño</span>
-              <span class="tarea-fecha">20 ene 2025</span>
-            </div>
-            <div class="tarea-acciones">
-              <button>Editar</button>
-              <button>Eliminar</button>
-            </div>
-          </article>
-
-          <!-- TARJETA 3 -->
-          <article class="tarea-card">
-            <span class="tarea-prioridad tarea-prioridad--baja">Baja</span>
-            <h3 class="tarea-titulo">Definir tipografía</h3>
-            <div class="tarea-meta">
-              <span class="tarea-etiqueta">Diseño</span>
-              <span class="tarea-fecha">30 ene 2025</span>
-            </div>
-            <div class="tarea-acciones">
-              <button>Editar</button>
-              <button>Eliminar</button>
-            </div>
-          </article>
-
-        </div>
-      </section>
-
-      <!-- ===== COLUMNA: EN PROGRESO ===== -->
-      <section class="columna-kanban">
-        <div class="columna-cabecera">
-          <h2 class="columna-titulo">En progreso</h2>
-          <span class="columna-contador">1</span>
-        </div>
-        <div class="columna-lista">
-
-          <article class="tarea-card">
-            <span class="tarea-prioridad tarea-prioridad--media">Media</span>
-            <h3 class="tarea-titulo">Maquetar tarjetas</h3>
-            <div class="tarea-meta">
-              <span class="tarea-etiqueta">Frontend</span>
-              <span class="tarea-fecha">18 ene 2025</span>
-            </div>
-            <div class="tarea-acciones">
-              <button>Editar</button>
-              <button>Eliminar</button>
-            </div>
-          </article>
-
-        </div>
-      </section>
-
-      <!-- ===== COLUMNA: LISTO ===== -->
-      <section class="columna-kanban">
-        <div class="columna-cabecera">
-          <h2 class="columna-titulo">Listo</h2>
-          <span class="columna-contador">1</span>
-        </div>
-        <div class="columna-lista">
-
-          <article class="tarea-card">
-            <span class="tarea-prioridad tarea-prioridad--baja">Baja</span>
-            <h3 class="tarea-titulo">Crear proyecto base</h3>
-            <div class="tarea-meta">
-              <span class="tarea-etiqueta">Setup</span>
-              <span class="tarea-fecha">10 ene 2025</span>
-            </div>
-            <div class="tarea-acciones">
-              <button>Editar</button>
-              <button>Eliminar</button>
-            </div>
-          </article>
-
-        </div>
-      </section>
-
-    </main>
-  </div>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TaskFlow</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/styles.css" />
+  </head>
+  <body>
+    <div class="panel">
+      <!-- HEADER -->
+      <header class="panel-header">
+        <h1 class="panel-titulo">Creación Página Web</h1>
+        <span class="panel-subtitulo"> Gestión de tareas </span>
+      </header>
+      <!-- TABLERO -->
+      <main class="panel-tablero">
+        <!-- COLUMNA POR HACER -->
+        <section class="columna-kanban">
+          <div class="columna-cabecera">
+            <h2 class="columna-titulo">Por hacer</h2>
+            <span class="columna-contador">3</span>
+          </div>
+          <div class="columna-lista">
+            <!-- TARJETA NUEVA + VENCIDA -->
+            <article class="tarea-card tarea-card--nueva">
+              <span class="badge-vencida"> Vencida </span>
+              <span class="tarea-prioridad tarea-prioridad--alta"> Alta </span>
+              <h3 class="tarea-titulo">Crear paleta de colores</h3>
+              <div class="tarea-meta">
+                <span class="tarea-etiqueta tooltip">
+                  Diseño
+                  <span class="tooltip-text">
+                    Definición visual del proyecto
+                  </span>
+                </span>
+                <span class="tarea-fecha"> 15 ene 2025 </span>
+              </div>
+              <div class="barra-carga"></div>
+              <div class="tarea-acciones">
+                <button>Editar</button>
+                <button>Eliminar</button>
+              </div>
+            </article>
+            <!-- TARJETA 2 -->
+            <article class="tarea-card">
+              <span class="tarea-prioridad tarea-prioridad--media">
+                Media
+              </span>
+              <h3 class="tarea-titulo">Definir logo</h3>
+              <div class="tarea-meta">
+                <span class="tarea-etiqueta"> Diseño </span>
+                <span class="tarea-fecha"> 20 ene 2025 </span>
+              </div>
+              <div class="tarea-acciones">
+                <button>Editar</button>
+                <button>Eliminar</button>
+              </div>
+            </article>
+            <!-- TARJETA 3 -->
+            <article class="tarea-card">
+              <span class="tarea-prioridad tarea-prioridad--baja"> Baja </span>
+              <h3 class="tarea-titulo">Definir tipografía</h3>
+              <div class="tarea-meta">
+                <span class="tarea-etiqueta"> Diseño </span>
+                <span class="tarea-fecha"> 30 ene 2025 </span>
+              </div>
+              <div class="tarea-acciones">
+                <button>Editar</button>
+                <button>Eliminar</button>
+              </div>
+            </article>
+          </div>
+        </section>
+        <!-- COLUMNA EN PROGRESO -->
+        <section class="columna-kanban">
+          <div class="columna-cabecera">
+            <h2 class="columna-titulo">En progreso</h2>
+            <span class="columna-contador">1</span>
+          </div>
+          <div class="columna-lista">
+            <article class="tarea-card">
+              <span class="tarea-prioridad tarea-prioridad--media">
+                Media
+              </span>
+              <h3 class="tarea-titulo">Maquetar tarjetas</h3>
+              <div class="tarea-meta">
+                <span class="tarea-etiqueta"> Frontend </span>
+                <span class="tarea-fecha"> 18 ene 2025 </span>
+              </div>
+              <div class="tarea-acciones">
+                <button>Editar</button>
+                <button>Eliminar</button>
+              </div>
+            </article>
+          </div>
+        </section>
+        <!-- COLUMNA LISTO -->
+        <section class="columna-kanban">
+          <div class="columna-cabecera">
+            <h2 class="columna-titulo">Listo</h2>
+            <span class="columna-contador">1</span>
+          </div>
+          <div class="columna-lista">
+            <article class="tarea-card">
+              <span class="tarea-prioridad tarea-prioridad--baja"> Baja </span>
+              <h3 class="tarea-titulo">Crear proyecto base</h3>
+              <div class="tarea-meta">
+                <span class="tarea-etiqueta"> Setup </span>
+                <span class="tarea-fecha"> 10 ene 2025 </span>
+              </div>
+              <div class="tarea-acciones">
+                <button>Editar</button>
+                <button>Eliminar</button>
+              </div>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
 </html>

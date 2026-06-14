@@ -3,6 +3,7 @@
    Importar Tokens
 ═══════════════════════════════════ */
 @import url(tokens.css);
+@import url(animations.css);
 
 /* ═══════════════════════════════════
    RESET GLOBAL
@@ -139,6 +140,7 @@ body {
 
 .tarea-card {
   display: grid;
+  position: relative;
   grid-template-areas:
     "prioridad titulo"
     "prioridad meta"
@@ -149,6 +151,30 @@ body {
   background: var(--color-superficie);
   border-radius: var(--radio-md);
   box-shadow: var(--sombra-sm);
+  will-change: transform;
+  transition: transform 200ms ease, box-shadow 200ms ease;
+  cursor: pointer;
+}
+
+.badge-vencida {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: var(--prioridad-alta);
+  color: white;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  animation: pulse 1.8s ease infinite;
+  z-index: 1;
+}
+
+.tarea-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--sombra-md);
 }
 
 .tarea-prioridad { grid-area: prioridad; }
